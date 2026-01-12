@@ -1,7 +1,6 @@
 :root {
     --bg-color: #F5F0FF;
     --accent-color: #9A6EE2;
-    --main-text-color: #9A6EE2;
     --main-text-color: #2A0B4F;
     --second-text-color: #6B4E8E;
 }
@@ -58,4 +57,11 @@ html {
 }
 body {
     background-color: var(--bg-color);
+}
+.main__text {
+    color: var(--main-text-color);
+}
+
+.second__text {
+    color: var(--second-text-color);
 }
