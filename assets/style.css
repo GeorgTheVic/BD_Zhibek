@@ -154,7 +154,7 @@ body {
 .side__img {
     position: fixed;
     right: 0;
-    top: 70%;
+    bottom: 20px;
     z-index: 500;
     animation-name: leftRight;
     animation-duration: 3s;
@@ -162,9 +162,22 @@ body {
     animation-timing-function: linear;
     /* Constant speed */
     animation-iteration-count: infinite;
-    /* Loops forever */
-    /* animation-direction: alternate; */
-    /* Uncomment to make it go back and forth */
+}
+
+.bubble {
+    display: none;
+    position: fixed;
+    right: 80px;
+    bottom: 130px;
+    z-index: 500;
+    animation-name: leftRight;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.side__img:hover + .bubble {
+    display: block;
 }
 
 .wrapper {
@@ -187,6 +200,7 @@ body {
     padding: 0 15px;
     overflow: hidden;
     max-width: calc(1440px - 15px * 2);
+    margin: 0 auto;
 
     height: 100vh;
 }
@@ -221,9 +235,34 @@ body {
     filter: drop-shadow(0px 0px 20px var(--accent-color));
 }
 
+.img__1 {
+    animation: moveing_1 3.7s ease-in-out infinite;
+}
+
+.img__2 {
+    animation: gentle-shake 4s ease-in-out infinite;
+}
+
+.img__3 {
+    animation: moving_gentle 4s ease-in-out infinite;
+}
+
+.img__4 {
+    animation: wind-sway 3s ease-in-out infinite;
+}
+
 .swiper {
-    width: 600px;
-    height: 300px;
+    width: 300px;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.swiper-slide {
+    padding: 30px 0;
+    width: 400px;
 }
 
 @keyframes leftRight {
@@ -237,5 +276,141 @@ body {
 
     100% {
         transform: translateX(0);
+    }
+}
+
+@keyframes moveing_1 {
+    0% {
+        transform: translate(-10px, 15px);
+    }
+
+    20% {
+        transform: translate(5px, 10px);
+    }
+
+    40% {
+        transform: translate(-2px, 1px);
+    }
+
+    60% {
+        transform: translate(-7, 3px);
+    }
+
+    80% {
+        transform: translate(-10px, -15px);
+    }
+
+    100% {
+        transform: translate(-10px, 15px);
+    }
+}
+
+
+@keyframes moving_gentle {
+    0% {
+        transform: translate(-8px, 12px);
+    }
+
+    20% {
+        transform: translate(3px, 8px);
+    }
+
+    40% {
+        transform: translate(-1px, 2px);
+    }
+
+    60% {
+        transform: translate(-5px, 4px);
+    }
+
+    80% {
+        transform: translate(-8px, -12px);
+    }
+
+    100% {
+        transform: translate(-8px, 12px);
+    }
+}
+
+@keyframes gentle-shake {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-2px, -2px) rotate(-0.5deg);
+    }
+
+    20% {
+        transform: translate(2px, 2px) rotate(0.5deg);
+    }
+
+    30% {
+        transform: translate(-2px, 2px) rotate(-0.3deg);
+    }
+
+    40% {
+        transform: translate(2px, -2px) rotate(0.3deg);
+    }
+
+    50% {
+        transform: translate(-2px, -2px) rotate(-0.2deg);
+    }
+
+    60% {
+        transform: translate(2px, 2px) rotate(0.2deg);
+    }
+
+    70% {
+        transform: translate(-2px, 2px) rotate(-0.1deg);
+    }
+
+    80% {
+        transform: translate(2px, -2px) rotate(0.1deg);
+    }
+
+    90% {
+        transform: translate(-2px, -2px) rotate(-0.05deg);
+    }
+}
+
+@keyframes wind-sway {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    33% {
+        transform: translate(1px, 0) rotate(2deg);
+    }
+
+    66% {
+        transform: translate(-1px, 1px) rotate(-2deg);
+    }
+}
+
+@keyframes happy-tremble {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translate(0.5px, 0.5px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translate(-0.5px, -0.5px);
     }
 }
