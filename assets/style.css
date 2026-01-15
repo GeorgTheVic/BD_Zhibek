@@ -176,7 +176,7 @@ body {
     animation-iteration-count: infinite;
 }
 
-.side__img:hover + .bubble {
+.side__img:hover+.bubble {
     display: block;
 }
 
@@ -231,6 +231,14 @@ body {
     right: 200px;
 }
 
+.inner__text {
+    width: 40%;
+}
+
+.margin {
+    margin-bottom: 30px;
+}
+
 .btn {
     padding: 10px 30px;
     font-family: "Caveat", cursive;
@@ -274,6 +282,11 @@ body {
 .swiper-slide {
     padding: 30px 0;
     width: 400px;
+}
+
+video {
+    border-radius: 10px;
+    box-shadow: 0 0 30px var(--second-text-color)
 }
 
 @keyframes leftRight {
