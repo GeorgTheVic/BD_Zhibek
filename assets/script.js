@@ -1,6 +1,6 @@
 
 
-// document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     const swiper = new Swiper('.swiper', {
         // Optional parameters
         effect: 'fade',
@@ -58,4 +58,4 @@
         clickSound.currentTime = 0;
         clickSound.play();
     });
-// })
+})
